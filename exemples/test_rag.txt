@@ -1,0 +1,9 @@
+Document fictif de test — Projet Nuage
+
+Le projet Nuage est une application de réservation de salles.
+La responsable du projet est Amina.
+Le budget du projet est de 2 400 euros.
+La date de livraison prévue est le 18 décembre 2026.
+Le système doit prendre en charge au maximum 50 utilisateurs simultanés.
+Les sauvegardes de la base de données sont réalisées chaque soir à 23 heures.
+Ce document ne précise pas la ville d'implantation du projet.

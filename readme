@@ -1,0 +1,16 @@
+📋 Cahier des Charges – Project RAG Chatbot Cloud1. Context & Objectives1.1 Objectif GénéralDévelopper et déployer en ligne une application web interactive basée sur un LLM couplé à une architecture RAG (Retrieval-Augmented Generation). L'application permettra à un utilisateur de charger des documents (PDF, TXT, Markdown) et d'interagir en langage naturel avec leurs contenus de façon fiable et vérifiable.1.2 Problématiques RésoluesRecherche documentaire lente : Évite la lecture manuelle de longs documents en fournissant une recherche sémantique précise.Réduction des hallucinations : Force le modèle de langage à répondre uniquement en s'appuyant sur les extraits de documents pertinents.Accessibilité web : Rendre l'outil disponible en ligne gratuitement sans déploiement complexe sur la machine de l'utilisateur.2. Spécifications Fonctionnelles2.1 Fonctionnalités ClésGestion des Documents (Ingestion) :Interface pour importer des fichiers (format PDF en priorité).Découpage automatique des textes (Chunking) et création d'empreintes vectorielles (Embeddings).Stockage distant dans une base de données vectorielle.Interface de Chat & Interaction RAG :Zone de saisie de texte pour poser des questions sur les documents importés.Historique de discussion au sein de la session.Réponses générées avec indication / citation des sources ou des extraits consultés.Administration & Sécurité de base :Isolation simple des sessions ou stockage persistant via clé d'indexation.Masquage et protection des clés d'API (secrets d'environnement).3. Architecture Technique & Stack GratuitPour garantir un déploiement 100% gratuit tout en conservant d'excellentes performances :ComposantTechnologie ChoisieJustification du Choix GratuitFrontend / UIStreamlitSimplicité en Python, idéal pour prototyper rapidement des interfaces IA.Backend / FrameworkLangChain ou LlamaIndexFramework standard pour le traitement RAG, le chunking et la gestion des chaînes.Embeddings & LLMGroq API (Llama-3) ou Hugging Face Inference APIGroq offre un accès gratuit ultra-rapide à Llama 3 / Mistral.Vector DatabaseQdrant Cloud ou Pinecone (Free Tier)Offre un cluster cloud gratuit illimité dans le temps pour stocker tes vecteurs.Hébergement WebStreamlit Community Cloud ou Hugging Face SpacesHébergement gratuit et continu relié directement à ton dépôt GitHub.4. Jalons du Projet & Planning de RéalisationPhase 1 : Conception & Setup
+  ├── Création du dépôt GitHub
+  └── Obtenir les clés d'API gratuites (Groq / Hugging Face, Qdrant/Pinecone)
+
+Phase 2 : Développement du Pipeline RAG (Local)
+  ├── Module d'ingestion & découpage des PDFs
+  ├── Génération des embeddings & stockage vectoriel
+  └── Chaîne de requête RAG (Retriever + Prompt + LLM)
+
+Phase 3 : Interface Utilisateur
+  └── Implémentation du Chat sous Streamlit
+
+Phase 4 : Déploiement Cloud
+  ├── Configuration des secrets (variables d'environnement)
+  └── Publication sur Streamlit Community Cloud / HF Spaces
+5. Livrables AttendusCode source : Dépôt GitHub propre avec requirements.txt, .gitignore et documentation README.md.Application Web en ligne : URL publique fonctionnelle permettant d'importer un PDF et d'échanger avec le bot.Documentation technique : Instructions d'installation en local et guide d'utilisation.
